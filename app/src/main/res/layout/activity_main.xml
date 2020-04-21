@@ -1,0 +1,94 @@
+<!--Andrew Hart S1616276-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:tools="http://schemas.android.com/tools"
+     android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <TextView
+        android:id="@+id/salutation"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:textSize="25sp"
+        android:text="S1616276"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/editTxt"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="Search a road">
+
+        </EditText>
+
+        <Button
+            android:id="@+id/searchButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:onClick="onClick4"
+            android:text="Search">
+
+        </Button>
+    </LinearLayout>
+
+
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+        tools:context=".MainActivity" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/roadworksbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:onClick="onClick2"
+            android:text="Roadworks" />
+
+        <Button
+            android:id="@+id/plannedroadworksbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:onClick="onClick3"
+            android:text="Planned Roadworks" />
+
+        <Button
+            android:id="@+id/startButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:onClick="onClick1"
+            android:text="Current Incidents"/>
+    </LinearLayout>
+
+
+ <ScrollView
+     android:id="@+id/textResults"
+     android:layout_width="fill_parent"
+     android:layout_height="fill_parent">
+
+     <TextView
+         android:id="@+id/acknowledgement"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:text="Select A Feed To Display Here."
+         android:textSize="15sp" />
+    </ScrollView>
+</LinearLayout>
+

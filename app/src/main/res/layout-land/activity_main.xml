@@ -1,0 +1,119 @@
+<!--Andrew Hart S1616276-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal">
+
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal">
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_gravity="left"
+        android:layout_width="200dp"
+        android:layout_height="300dp"
+        tools:context=".MainActivity" />
+
+
+    <ScrollView
+        android:id="@+id/textResults"
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="right">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="right"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/editTxt"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Search a road">
+
+                </EditText>
+
+                <Button
+                    android:id="@+id/searchButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:onClick="onClick4"
+                    android:text="Search">
+
+                </Button>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/acknowledgement"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:text="Select A Feed To Display Here."
+                android:textSize="15sp" />
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/salutation"
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:layout_gravity="top"
+            android:text="S1616276"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/roadworksbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:onClick="onClick2"
+            android:text="Roadworks" />
+
+        <Button
+            android:id="@+id/plannedroadworksbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:onClick="onClick3"
+            android:text="Planned Roadworks" />
+
+        <Button
+            android:id="@+id/startButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:onClick="onClick1"
+            android:text=" Current Incidents" />
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+</LinearLayout>
+
+</ScrollView>
